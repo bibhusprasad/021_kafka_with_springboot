@@ -1,5 +1,6 @@
 package com.bibhu.learn.kafka.handler;
 
+import com.bibhu.learn.kafka.message.OrderCreated;
 import com.bibhu.learn.kafka.service.DispatchService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +19,7 @@ public class OrderCreatedHandler {
             topics = "order.created",
             groupId = "dispatch.order.created.consumer"
     )
-    public void listen(String payload) {
+    public void listen(OrderCreated payload) {
         log.info("OrderCreatedHandler received payload: {}", payload);
         dispatchService.process(payload);
     }
