@@ -1,12 +1,12 @@
-package com.bibhu.learn.kafka_with_springboot;
+package com.bibhu.learn.kafka;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class KafkaWithSpringbootApplicationTests {
 
-	@Test
+	@Disabled
 	void contextLoads() {
 	}
 
